@@ -20,6 +20,8 @@
   font-weight: bold;
   font-size:1.8rem;
   color: #23A37C;
+  background-color: white;
+  border: 0px solid grey;
 }
 
 
@@ -36,33 +38,71 @@
   background-color: white;
 }
 
+/*
+.map-container {
+  height: 73vh;
+  width: 90%;
+  position: unset !important;
+}
+*/
+
 .right2 {
     flex: 2;
-    padding:8em 2em;
-  background-color: #9E9E9E;
+    padding:6em 2em;
+    background-color: #9E9E9E;
 }
 
 .data-container {
-      width: 500px;
-      margin-bottom: 25px;
+      width: 200px;
+      margin-top: -10px;
+      margin-bottom: 10px;
       border: 1px solid grey;
-      padding: 16px 40px;
+      padding: 0px 10px;
       border-radius: 25px;
       font-size: 1.4rem;
       background-color: #D9D9D9;
 }
 
+.data-container2 {
+      gap: 8px;
+      display: flex;
+      width: 580px;
+      height: 50px;
+      margin:25px 0;
+      padding: 0px 10px;
+      font-size: 1.4rem;
+      background-color: #D9D9D9;
+}
+
+.data1 {
+display: block !important;
+margin-top : -10px;
+margin-bottom : -20px;
+margin-right :70px;
+font-size: 20px;
+  font-weight: bold;
+}
+
+.data2{
+
+margin-right :70px;
+font-size: 16px;
+}
+
 .transport {
-gap: 8px;
+    gap: 8px;
     display: flex;
     width: 500px;
     height: 50px;
     margin-bottom: 25px;
-    border: 1px solid grey;
     padding: 16px 40px;
-    border-radius: 25px;
     font-size: 1.4rem;
     background-color: #D9D9D9;
+}
+
+.location-data {
+
+    display: flex;
 }
 
 .logo-container {
@@ -72,7 +112,7 @@ gap: 8px;
 }
 
 .logo {
-  width: 70px;
+  width: 50px;
   height: 45px;
 }
 
@@ -133,4 +173,22 @@ gap: 8px;
   cursor: pointer;
   color: #D9D9D9;
   background-color: black;
+}
+
+.routes {
+    width: 500px;
+    height: 400px;
+    padding: 16px 40px;
+    font-size: 1.4rem;
+    background-color: #D9D9D9;
+}
+
+.possible_routes {
+    width: 420px;
+    height: 40px;
+    padding: 16px 40px;
+    font-size: 1.4rem;
+    background-color: #23A37C;
+    justify-content: center;
+    align-items: center;
 }

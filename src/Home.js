@@ -1,22 +1,22 @@
 import './Home.css';
-import React, { useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { DataContext } from './Context';
-
-//export const DataContext = createContext();
+import React, { useState } from 'react';
+import { useNavigate,Link } from 'react-router-dom';
 
 export const Home = ({ children }) => {
 
       const navigate = useNavigate();
 
-      const { source, setSource, destination, setDestination, percentage, setPercentage } = useContext(DataContext);
-
+      const [source, setSource] = useState('');
+      const [destination, setDestination] = useState('');
+      const [percentage, setPercentage] = useState('');
 
       const handleSubmit = () => {
         if (source === '' || destination === '' || percentage === '') {
           alert('Please fill in all input fields.');
         } else {
-          navigate('/possibleroutes');
+
+          sendDataToAnotherFile(source);
+          navigate(`/possibleroutes/${source}/${destination}`);
           console.log('Source:', source);
           console.log('Destination:', destination);
           console.log('Percentage:', percentage);
@@ -27,6 +27,15 @@ export const Home = ({ children }) => {
         }
 
       };
+
+      <Link to={`/possibleroutes/${source}`}>Possible Routes</Link>
+
+      const sendDataToAnotherFile = (data) => {
+          // Do something with the data in another JavaScript file
+          // Example: import and call a function from another file
+          // AnotherFile.processData(data);
+          return source;
+        };
 
 
   return (
@@ -40,9 +49,7 @@ export const Home = ({ children }) => {
          <div className="left">
             <div className="container1">
                 <div className="title">
-                    <a>Elevation-based</a>
-                    <br />
-                    <a>Navigation System</a>
+                    <p>Elevation-based <br /> Navigation System</p>
                 </div>
                 <div className="description">
                     <p>Navigating system that can show possible routes that are shortest and also consider elevation gain.</p>

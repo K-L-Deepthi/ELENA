@@ -12,7 +12,7 @@ function App() {
         {/* ... */}
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route path="/possibleroutes" element={<PossibleRoutes />} />
+          <Route path="/possibleroutes/:source/:destination" element={<PossibleRoutes />} />
         </Routes>
       </div>
     </Router>

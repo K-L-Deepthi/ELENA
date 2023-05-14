@@ -51,7 +51,8 @@
 }
 
 .title {
-    margin-bottom: 30px;
+    margin-top: -150px !important;
+    margin-bottom: -60px !important;
     font-weight: bold;
     font-size: 4rem;
     color: #23A37C;
